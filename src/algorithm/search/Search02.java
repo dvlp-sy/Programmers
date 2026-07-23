@@ -1,6 +1,5 @@
 package algorithm.search;
 
-import java.io.IOException;
 import java.util.Arrays;
 
 /**
@@ -9,7 +8,7 @@ import java.util.Arrays;
  */
 public class Search02 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int distance = 25;
         int[] rocks = { 2, 4, 11, 14, 17, 21 };
         int n = 2;
