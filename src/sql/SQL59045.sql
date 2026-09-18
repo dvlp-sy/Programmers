@@ -1,0 +1,15 @@
+/*
+ 보호소에서 중성화한 동물
+ https://school.programmers.co.kr/learn/courses/30/lessons/59045
+ */
+SELECT I.ANIMAL_ID AS ANIMAL_ID,
+       I.ANIMAL_TYPE AS ANIMAL_TYPE,
+       I.NAME AS NAME
+FROM ANIMAL_INS I
+JOIN ANIMAL_OUTS O
+  ON I.ANIMAL_ID = O.ANIMAL_ID
+WHERE I.SEX_UPON_INTAKE LIKE 'Intact%'
+  AND (O.SEX_UPON_OUTCOME LIKE 'Spayed%'
+    OR O.SEX_UPON_OUTCOME LIKE 'Neutered%')
+ORDER BY ANIMAL_ID
+;
